@@ -1,0 +1,51 @@
+$def with (content, count)
+<head>
+<script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+        </script>
+
+	
+	
+</head>
+<body>
+
+
+	<table border="1">
+		<!-- gustav, den här variabeln passeras in från GET-metoden i default-klassen i dict.py
+			 själva uttrycket evalueras av web.py innan sidan renderas -->
+		$for i in content:
+			<tr>
+				<td>$:i.word</td>
+				<td>$:i.description</td>
+			</tr>
+		
+	</table>
+	
+	<br/><br/>
+	
+<form name="add" method="post" action="add" id="add_new">
+	<table border="0" width="100%">
+		<tr>
+			<td>Word on the street</td>
+			<td>
+				<input type="text" name="word" size="100%"/>
+			</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			
+			<td>
+				<input type="description" name="description" size="100%"/>
+			</td>
+
+		</tr>
+		<input type="submit" value="add" id='addbutton'/>
+		
+	</table>
+	
+</form>
+<script type='text/javascript' src="static/js/ecma.js"> </script>
+
+$count entries.
+
+</body>
